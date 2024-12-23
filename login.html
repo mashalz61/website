@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/logo.png" alt="WhiskAndMunch Logo" class="logo-img">
+                <span>Whisk</span><span>AndMunch</span>
+            </div>
+            <!-- Navbar Links -->
+            <div class="nav-links">
+                <a href="index.html" id="home-link">Home</a>
+                <a href="cart.html" id="cart-link">Cart</a>
+                <a href="login.html" id="login-link">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Login to Your Account</h1>
+        <form id="login-form" action="login.php" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Links for additional features -->
+        <div class="extra-links">
+            <p><a href="register.html">New user? Register here</a></p>
+            <p><a href="forgot-password.html">Forgot your password?</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WhiskAndMunch</p>
+    </footer>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            fetch("login.php", {
+                method: "POST",
+                body: formData,
+            })
+                .then((response) => response.text())
+                .then((data) => alert(data))
+                .catch((error) => console.error(error));
+        });
+    </script>
+</body>
+</html>

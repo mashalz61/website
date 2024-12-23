@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhiskAndMunch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar Section -->
+  <header>
+    <div class="navbar">
+      <!-- Logo with image and text on the left -->
+      <div class="logo">
+        <img src="images/logo.png" alt="WhiskAndMunch Logo" class="logo-img">
+        <span>Whisk</span><span>AndMunch</span>
+      </div>
+
+      <!-- Cart and Login on the right -->
+      <div class="nav-links">
+        <a href="cart.html" id="cart-link">Cart
+          <!-- Cart icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+            <path d="M6 6h15l-1.68 10.04a2 2 0 0 1-1.98 1.76H7.66a2 2 0 0 1-1.98-1.76L4 6H2"></path>
+            <circle cx="10" cy="21" r="2"></circle>
+            <circle cx="18" cy="21" r="2"></circle>
+          </svg> 
+        </a>
+        <a href="login.html" id="login-link">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Image -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="images/hero-image.jpg" alt="Delicious food" class="hero-img">
+    </div>
+  </section>
+
+  <!-- Explore Menu Section -->
+  <section class="menu">
+    <div class="menu-header">
+      <h2>Explore Menu</h2>
+    </div>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="images/item1.jpg" alt="Starters">
+        <button onclick="viewCategory('starters')">Starters</button>
+      </div>
+      <div class="menu-item">
+        <img src="images/item2.jpg" alt="Pizza">
+        <button onclick="viewCategory('pizza')">Pizza</button>
+      </div>
+      <div class="menu-item">
+        <img src="images/item3.jpg" alt="Sandwich">
+        <button onclick="viewCategory('sandwich')">Sandwich</button>
+      </div>
+      <div class="menu-item">
+        <img src="images/item4.jpg" alt="Burger">
+        <button onclick="viewCategory('burger')">Burger</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section (Website Information) -->
+  <section class="about">
+    <div class="about-content">
+      <h2>About WhiskAndMunch</h2>
+      <p>WhiskAndMunch is your go-to place for delicious food that tantalizes your taste buds! Whether you're in the mood for starters or a full meal, we have something special for every craving. Explore our menu today and experience culinary excellence at your fingertips!</p>
+      <p>Visit us regularly for new and exciting additions to our menu!</p>
+    </div>
+  </section>
+
+  <!-- Add the JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
